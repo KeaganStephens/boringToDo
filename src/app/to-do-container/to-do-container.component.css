@@ -1,0 +1,7 @@
+.container{
+    border: solid 2px red;
+    height: 100%;
+    width: calc(100% - 10vh);
+    margin: 5vh;
+}
+
