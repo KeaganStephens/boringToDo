@@ -1,5 +1,5 @@
 <div class="container" *ngFor="let item of list">
-    <app-to-do-item></app-to-do-item>
+    <app-to-do-item [currentItemInfo]="item"></app-to-do-item>
 </div>
 <div class="container_for_button">
     <app-add-list-component></app-add-list-component>

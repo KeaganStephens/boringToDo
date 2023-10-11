@@ -10,7 +10,10 @@ import { IndexInfo } from 'src/app/To-do-class-item';
 export class AddListComponentComponent {
   constructor(private infoService : InfoService){}
 
+  index = 0
+
   addToList(){
-    this.infoService.list.push(new IndexInfo(0,"To be the best"))
+    this.infoService.list.push(new IndexInfo(this.index,``))
+    this.index++
   }
 }

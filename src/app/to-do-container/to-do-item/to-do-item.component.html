@@ -1,4 +1,5 @@
 <div class="to-do-box-container flex-parent">
     <button class="flex-20">[ ]</button>
-    <p class="flex-child">{{info[0].additionalInfo}}</p>
+    <input [(ngModel)]="currentItemInfo.additionalInfo" *ngIf="!currentItemInfo.saved" (keydown.enter)="handleEnterKey()"> 
+    <p class="flex-child" *ngIf="currentItemInfo.saved">{{currentItemInfo.additionalInfo}}</p>
 </div>

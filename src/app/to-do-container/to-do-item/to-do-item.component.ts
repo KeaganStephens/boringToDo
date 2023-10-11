@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InfoService } from 'src/app/info.service';
+import { IndexInfo } from 'src/app/To-do-class-item';
 
 @Component({
   selector: 'app-to-do-item',
@@ -9,10 +10,15 @@ import { InfoService } from 'src/app/info.service';
 export class ToDoItemComponent {
   constructor(private infoService : InfoService){}
 
-  info = this.infoService.list
-  
+  @Input() currentItemInfo !: IndexInfo
+
+  handleEnterKey(){
+    this.currentItemInfo.saved = true;
+    console.log("umm")
+  }
+
   ngOnInit(){
-    console.log(this.info[0])
+    console.log(this.currentItemInfo)
   }
 
 }
