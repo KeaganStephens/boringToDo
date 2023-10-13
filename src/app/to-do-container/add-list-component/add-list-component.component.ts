@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { InfoService } from 'src/app/info.service';
 import { IndexInfo } from 'src/app/To-do-class-item';
 
@@ -8,7 +8,10 @@ import { IndexInfo } from 'src/app/To-do-class-item';
   styleUrls: ['./add-list-component.component.css']
 })
 export class AddListComponentComponent {
-  constructor(private infoService : InfoService){}
+  constructor(
+    private infoService : InfoService,
+    private renderer: Renderer2
+  ){}
 
   index = 0
 
@@ -16,4 +19,5 @@ export class AddListComponentComponent {
     this.infoService.list.push(new IndexInfo(this.index,``))
     this.index++
   }
+  
 }
