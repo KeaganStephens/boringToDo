@@ -1,6 +1,6 @@
 <div class="to-do-box-container flex-parent">
-    <button class="flex-20" (click)="removeTodo_item()">[ ]</button>
-    <input [(ngModel)]="currentItemInfo.additionalInfo" *ngIf="!currentItemInfo.saved" (keydown.enter)="handleEnterKey()" [attr.id]="'myInputRef' + currentItemInfo.index">
-    <p class="flex-child" *ngIf="currentItemInfo.saved">{{currentItemInfo.additionalInfo}}</p>
+    <button class="flex-20 removeTodo_item" (click)="removeTodo_item()"></button>
+    <input [(ngModel)]="currentItemInfo.additionalInfo" *ngIf="!currentItemInfo.saved" class="inputClass" (keydown.enter)="handleEnterKey()" [attr.id]="'myInputRef' + currentItemInfo.index">
+    <p class="inputClass" *ngIf="currentItemInfo.saved">{{currentItemInfo.additionalInfo}}</p>
 </div>
 
