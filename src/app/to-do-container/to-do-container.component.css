@@ -1,5 +1,5 @@
 .container{
-    border: solid 2px red;
+    /* border: solid 2px red; */
     height: 100%;
     width: calc(100% - 10vh);
     margin: 5vh;
@@ -10,4 +10,5 @@
     position: fixed;
     bottom: 2%;
     right: 2%;
+    z-index: 99;
 }
